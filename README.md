@@ -6,7 +6,7 @@
 
   - https://github.com/team-200-ok/related-listings
   - https://github.com/team-200-ok/bookings
-  - https://github.com/team-200-ok/overview-carousel
+  - https://github.com/team-200-ok/gallery-modal-overview
   - https://github.com/team-200-ok/reviews
 
 ## Table of Contents
