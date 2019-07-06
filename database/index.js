@@ -4,6 +4,7 @@
 //can use this script and inject its sample data into the
 //tables;
 //also add something to clear the database before each script
+console.log('I AM LINE 7 on index.js so i ran');
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('airbnb', 'root', null, {
@@ -33,7 +34,7 @@ Houses.init({
         autoIncrement: true
     },
     house_desc: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     },
     owner_name: {
         type: Sequelize.STRING
@@ -50,7 +51,7 @@ Houses.init({
     total_guests: {
         type: Sequelize.INTEGER
     }
-}, {sequelize, modelName: 'House', timestamps: false });
+}, {sequelize, modelName: 'Houses', timestamps: false });
 
 
 class Images extends Model {};
@@ -62,7 +63,7 @@ Images.init({
     house_Id: {
         type: Sequelize.INTEGER,
         references: {
-            model: 'houses',
+            model: 'Houses',
             key: 'id'
         }
     }
@@ -86,7 +87,9 @@ Amenities.init({
     }
 }, {sequelize, modelName: 'Amenities', timestamps: false});
 
-sequelize.sync({force: true})
+sequelize.sync();
+
+module.exports = {Houses, Images, Amenities};
 
 //HOUSES.HASMANY adds foreign key automatically, but id rather
 // show it explicitly in the schema.
@@ -109,4 +112,3 @@ sequelize.sync({force: true})
 // }, {
 // // options
 // });
-;
