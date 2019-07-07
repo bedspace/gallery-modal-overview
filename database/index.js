@@ -90,7 +90,6 @@ Amenities.init({
 sequelize.sync();
 
 module.exports = {Houses, Images, Amenities};
-
 //HOUSES.HASMANY adds foreign key automatically, but id rather
 // show it explicitly in the schema.
 // Houses.hasMany(Images);
