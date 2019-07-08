@@ -48,14 +48,52 @@ GenerateFakeHouses();
 
 
 const GenerateFakeImages = (houseId) => {
+    let images = [];
+    let bulkValues = [];
+    images.push('https://bit.ly/2XCuA4');
+    images.push('https://bit.ly/2Xun9Bc');
+    images.push('https://bit.ly/2XMKgXd');
+    images.push('https://bit.ly/32eDPLP');
+    for (var i = 0; i < images.length; i++) {
+        let values = {
+            image_url: images[i],
+            house_Id: 1
+        }
+        bulkValues.push(values);
+    }
+
+    Images.bulkCreate(bulkValues)
+    .then(() => {
+        return Images.findAll();
+    })
+    .then((data) => {
+        console.log('THE RESULT FOR IMAGES IS');
+        console.log(data);
+    })
     //Random image.urls
+
     // house_Id points to individual house
     //each house should have a default # of images
 };
 
+GenerateFakeImages();
+
 const GenerateFakeAmenities = () => {
     //this will be tricky
+
+    Amenities.create({
+        items: 'Wifi',
+        category: 'Basic',
+        house_Id: 1
+    }).then(() => {
+        return Amenities.findAll();
+    }).then((data) => {
+        console.log('AMENITIES DATA IS ');
+        console.log(data);
+    })
 };
+
+GenerateFakeAmenities();
 
 
 
