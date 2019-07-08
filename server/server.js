@@ -1,7 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const mySqlDb = require('./../database/seed.js');
+const Houses = require('./../database/index.js').Houses;
+const Images = require('./../database/index.js').Images;
+const Amenities = require('./../database/index.js').Amenities;
+// const mySqlDb = require('./../database/seed.js');
 
 
 let app = express();
@@ -13,12 +16,13 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser());
 
 app.get('/testing', (req,res) => {
-    mySqlDb.getHouses((error, results) => {
-        if (error) {
-            console.log("ERROR : " + error);
-        } else {
-            res.status(200).send(results);
-        }
+    Houses.findAll().then((results) => {
+        console.log('BEFORE WE SEND RESULTS, THE DATA TYPE IS');
+        // console.log(results);
+        res.status(200).send(results);
+        // res.send({results});
+    }).catch((error) => {
+        res.status(404).send('SORRY NO DATA');
     });
     // res.status(200).send('OK');
 });
@@ -35,4 +39,6 @@ app.listen(port, function() {
     console.log(`listening on port ${port}`);
 });
 
+
+module.exports = {app: app};
 
