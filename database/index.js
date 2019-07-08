@@ -1,15 +1,10 @@
-//This is where you connect to database using sequelize.
-//You create the schema here.
-//after that,  export this to the seed so the seed.js
-//can use this script and inject its sample data into the
-//tables;
-//also add something to clear the database before each script
-console.log('I AM LINE 7 on index.js so i ran');
 const Sequelize = require('sequelize');
+
 
 const sequelize = new Sequelize('airbnb', 'root', null, {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
 });
 
 sequelize
