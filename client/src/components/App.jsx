@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Buttons from './Buttons.jsx';
 
 const AppStyle = {
     width: '100%',
@@ -35,11 +36,37 @@ class App extends React.Component {
 
     render() {
         return (
-            <div style={AppStyle}>
-                <div >
-                    <img style={housePicture} src={'https://bit.ly/2Xun9Bc'}/>
+            <div className='parentDiv'>
+                <div>
+                    <div className="galleryContainer">
+                        <div className="leftChild">
+                            <img src="https://bit.ly/2Xun9Bc"/>
+                        </div>
+                        <div className="rightChild">
+                            <div className="rightInnerChild">
+                                <img className="smallImage" src="https://bit.ly/2XMKgXd"/>
+                            </div>
+                            <div className="rightInnerChild">
+                                <img className="smallImage" src="https://bit.ly/32eDPLP"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="viewPhotosContainer">
+                        <button className="viewPhotosButton">
+                            <span>View Photos</span>
+                        </button>
+                    </div>
+                    <div className="shareSaveContainer">
+                        <div>
+                            <div className="shareButton">
+
+                            </div>
+                            <div className="saveButton">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                hello worldoh!
             </div>
         )
     }
