@@ -34,6 +34,15 @@
     border-style: solid;
 }
 
+.leftChild:hover img {
+    transform: scale(1.1);
+}
+
+.leftChild img {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
 .rightChild {
     position: relative;
     width: 33%;
@@ -55,11 +64,35 @@
     border-style: solid;
 }
 
-.smallImage {
+/* .rightInnerChild img {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.rightInnerChild:hover img {
+    transform: scale(1.1);
+} */
+
+.rightInnerChild:hover img {
+    transform:scale(1.1);
+}
+
+.smallImageTop {
     display: inline-block;
     left: 0px;
     position: absolute;
+    transition: 0.3s;
+    transform: scale(1);
 }
+
+.smallImageBottom {
+    display: inline-block;
+    left: 0px;
+    position: absolute;
+    transition: 0.3s;
+    transform: scale(1);
+}
+
 
 .viewPhotosContainer {
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
@@ -67,6 +100,7 @@
     right: 24px;
     bottom: 24px;
 }
+
 
 .viewPhotosButton {
     display: inline-block;
