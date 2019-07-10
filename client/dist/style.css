@@ -107,9 +107,15 @@
 }
 
 #shareText {
-
     display: inline-block !important;
     align-self: center;
+}
+
+#heartIcon {
+    height:15px;
+    width:16px;
+    position: relative;
+    top: 2px;
 }
 
 .topButtons {

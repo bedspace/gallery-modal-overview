@@ -31,7 +31,15 @@ const Buttons = () => {
                     </div>
                     <div className="topButtons" style={{marginLeft: '18px'}}>
                         <button className="viewPhotosButton">
-                            <span>Save</span>
+                            <span>
+                                <div style={{'justifyContent': 'center', 'display': 'flex'}}>
+                                    <div style={{marginRight: '12px'}}>
+                                        <div></div>
+                                        <img id="heartIcon" src="https://bit.ly/30sMiZY"/>
+                                    </div>
+                                    <div>Save</div>
+                                </div>
+                            </span>
                         </button>
                     </div>
                 </div>
