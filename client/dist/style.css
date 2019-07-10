@@ -1,0 +1,138 @@
+/* USE MEDIA QUERIES SEEN ON AIRBNBS SITE!! THIS WILL MAKE IT RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+    .parentDiv {
+        background-color: burlywood;
+    }
+}
+
+.parentDiv {
+    /* font-family: Circular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    position: relative;
+    width: 100%;
+}
+
+.galleryContainer {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.leftChild {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    width: 67%;
+    height: 294.667px;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rightChild {
+    position: relative;
+    width: 33%;
+    height: 294.667px;
+    overflow:hidden;
+}
+
+.rightInnerChild {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.smallImage {
+    display: inline-block;
+    left: 0px;
+    position: absolute;
+}
+
+.viewPhotosContainer {
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+}
+
+.viewPhotosButton {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    width: auto;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: normal;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-width: 1px;
+    border-style: solid;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.shareSaveContainer {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    /* z-index: 1; */
+}
+
+#shareIcon {
+    display: inline-block !important;
+    align-self: center;
+}
+
+#shareIcon img {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+}
+
+#shareText {
+    display: inline-block !important;
+    align-self: center;
+}
+
+#heartIcon {
+    height:15px;
+    width:16px;
+    position: relative;
+    top: 2px;
+}
+
+.topButtons {
+    display: inline-block;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
