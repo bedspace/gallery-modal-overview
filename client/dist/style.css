@@ -93,6 +93,30 @@
     /* z-index: 1; */
 }
 
+#shareIcon {
+    display: inline-block !important;
+    align-self: center;
+}
+
+#shareIcon img {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+}
+
+#shareText {
+
+    display: inline-block !important;
+    align-self: center;
+}
+
+.topButtons {
+    display: inline-block;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
 
 
 * {

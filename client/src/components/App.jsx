@@ -40,32 +40,18 @@ class App extends React.Component {
                 <div>
                     <div className="galleryContainer">
                         <div className="leftChild">
-                            <img src="https://bit.ly/2Xun9Bc"/>
+                            <img src="https://bit.ly/2S8xQ6H"/>
                         </div>
                         <div className="rightChild">
                             <div className="rightInnerChild">
-                                <img className="smallImage" src="https://bit.ly/2XMKgXd"/>
+                                <img className="smallImage" src="https://bit.ly/2G8adqa"/>
                             </div>
                             <div className="rightInnerChild">
-                                <img className="smallImage" src="https://bit.ly/32eDPLP"/>
+                                <img className="smallImage" src="https://bit.ly/2G4EshE"/>
                             </div>
                         </div>
                     </div>
-                    <div className="viewPhotosContainer">
-                        <button className="viewPhotosButton">
-                            <span>View Photos</span>
-                        </button>
-                    </div>
-                    <div className="shareSaveContainer">
-                        <div>
-                            <div className="shareButton">
-
-                            </div>
-                            <div className="saveButton">
-
-                            </div>
-                        </div>
-                    </div>
+                    <Buttons/>
                 </div>
             </div>
         )
