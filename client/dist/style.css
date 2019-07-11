@@ -197,6 +197,33 @@
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
 }
 
+.modal {
+    position: fixed;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color: white;
+}
+
+.display-block {
+    display:block;
+}
+
+.display-none {
+    display: none;
+}
+
+#carousel {
+    width: 100%;
+    background-color: red;
+}
+
+#sidePanel {
+    width:264px;
+    height: 400px;
+    background-color: blue;
+}
 
 
 * {
