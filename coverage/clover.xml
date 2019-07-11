@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1562874347144" clover="3.2.0">
+  <project timestamp="1562874347144" name="All files">
+    <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6" elements="20" coveredelements="17" complexity="0" loc="13" ncloc="13" packages="1" files="2" classes="2"/>
+    <file name="App.jsx" path="/Users/JulioFuentes/Documents/hrsf119-FEC-team200ok/gallery-modal-overview/client/src/components/App.jsx">
+      <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="23" count="4" type="stmt"/>
+      <line num="25" count="4" type="stmt"/>
+      <line num="26" count="4" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
+    </file>
+    <file name="Buttons.jsx" path="/Users/JulioFuentes/Documents/hrsf119-FEC-team200ok/gallery-modal-overview/client/src/components/Buttons.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+    </file>
+  </project>
+</coverage>

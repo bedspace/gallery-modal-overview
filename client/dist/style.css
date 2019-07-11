@@ -31,10 +31,6 @@
     opacity: 1;
 }
 
-/* .galleryContainer:hover > .smallImageBottom:hover {
-    opacity: 1;
-} */
-
 .leftChild {
     -webkit-box-pack: center;
     -webkit-box-align: center;
