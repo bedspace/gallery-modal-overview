@@ -1,16 +1,12 @@
 /* USE MEDIA QUERIES SEEN ON AIRBNBS SITE!! THIS WILL MAKE IT RESPONSIVE */
 
-@media screen and (max-width: 1000px) {
-    .parentDiv {
-        background-color: burlywood;
-    }
-}
 
 .parentDiv {
     /* font-family: Circular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
     position: relative;
     width: 100%;
+    background-color: black;
 }
 
 .galleryContainer {
@@ -18,6 +14,26 @@
     align-items: center;
     overflow: hidden;
 }
+
+.galleryContainer:hover img{
+    opacity: 0.5;
+}
+
+.galleryContainer:hover .rightInnerChildBottom:hover img{
+    opacity: 1;
+}
+
+.galleryContainer:hover .rightInnerChildTop:hover img{
+    opacity: 1;
+}
+
+.galleryContainer:hover .leftChild:hover img{
+    opacity: 1;
+}
+
+/* .galleryContainer:hover > .smallImageBottom:hover {
+    opacity: 1;
+} */
 
 .leftChild {
     -webkit-box-pack: center;
@@ -36,11 +52,21 @@
 
 .leftChild:hover img {
     transform: scale(1.1);
+    /* z-index: 0; */
+    /* transform: opacity(0.5); */
+    /* transform: scale(1.1); */
+    /* opacity: (0.1); */
 }
 
 .leftChild img {
+    /* transition: all 0.3s, opacity 1s ease-in-out; */
     transition: all 0.3s;
     transform: scale(1);
+    /* opacity: 1; */
+    /* scale: 1; */
+    /* transform: opacity(1); */
+    /* transition: opacity 1s ease-in-out; */
+    /* opacity: 1; */
 }
 
 .rightChild {
@@ -50,7 +76,21 @@
     overflow:hidden;
 }
 
-.rightInnerChild {
+.rightInnerChildTop {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rightInnerChildBottom {
     -webkit-box-pack: center;
     -webkit-box-align: center;
     display: flex;
@@ -73,7 +113,11 @@
     transform: scale(1.1);
 } */
 
-.rightInnerChild:hover img {
+.rightInnerChildTop:hover img {
+    transform:scale(1.1);
+}
+
+.rightInnerChildBottom:hover img {
     transform:scale(1.1);
 }
 

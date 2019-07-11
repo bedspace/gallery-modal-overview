@@ -43,10 +43,10 @@ class App extends React.Component {
                             <img src="https://bit.ly/2S8xQ6H"/>
                         </div>
                         <div className="rightChild">
-                            <div className="rightInnerChild">
+                            <div className="rightInnerChildTop">
                                 <img className="smallImageTop" src="https://bit.ly/2G8adqa"/>
                             </div>
-                            <div className="rightInnerChild">
+                            <div className="rightInnerChildBottom">
                                 <img className="smallImageBottom" src="https://bit.ly/2G4EshE"/>
                             </div>
                         </div>
