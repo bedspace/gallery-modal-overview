@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Buttons from './Buttons.jsx';
+import FullScreenModal from './FullScreenModal.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -8,18 +9,32 @@ class App extends React.Component {
             modalActive: false
         }
 
-        this.activateModal = this.activateModal.bind(this);
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     }
 
 
-    activateModal() {
+    showModal() {
         console.log('MODAL STATE CHANGED');
         this.setState({
             modalActive: true
         })
     }
 
+    hideModal(event) {
+        console.log('MODAL STATE CLOSED');
+        if (event.keyCode === 27) {
+            this.setState({
+                modalActive: false
+            })
+        }
+    }
+
     componentDidMount() {
+
+        //for handling escape key exit on modal
+        window.addEventListener('keyup', this.hideModal, false);
+
         fetch('http://localhost:1128/testing')
         .then(function(response) {
           console.log('BEFORE RESPONSE GETS JSOND');
@@ -48,12 +63,12 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Buttons activateModal={this.activateModal}/>
+                    <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
                 </div>
+            <FullScreenModal modalActive={this.state.modalActive}/>
             </div>
         )
     }
 }
-
 
 export default App;

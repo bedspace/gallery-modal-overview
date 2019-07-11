@@ -4,7 +4,7 @@ const Buttons = (props) => {
     return (
         <React.Fragment>
             <div className="viewPhotosContainer">
-                <button onClick={props.activateModal} className="viewPhotosButton viewPhoto">
+                <button onClick={props.showModal} className="viewPhotosButton viewPhoto">
                     <span>View Photos</span>
                 </button>
             </div>
