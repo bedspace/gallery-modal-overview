@@ -1,25 +1,22 @@
 import React, {Component} from 'react';
 import Buttons from './Buttons.jsx';
 
-const AppStyle = {
-    width: '100%',
-    height: '500px',
-    'background-color': 'blue',
-    position: 'relative'
-}
-
-const housePicture = {
-    width: '50%',
-    height: '50%'
-}
-
-
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            modalActive: false
         }
+
+        this.activateModal = this.activateModal.bind(this);
+    }
+
+
+    activateModal() {
+        console.log('MODAL STATE CHANGED');
+        this.setState({
+            modalActive: true
+        })
     }
 
     componentDidMount() {
@@ -51,7 +48,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Buttons/>
+                    <Buttons activateModal={this.activateModal}/>
                 </div>
             </div>
         )
