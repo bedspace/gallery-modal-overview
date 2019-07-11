@@ -17,9 +17,11 @@ class FullScreenModal extends React.Component {
         return (
             <React.Fragment>
                 <div className={showOrHide}>
-                    <div style={{display: 'table-row'}}>
-                        <div id="carousel" style={{display:'table-cell'}}></div>
-                        <div id="sidePanel" style={{display:'table-cell'}}></div>
+                    <div style={{display: 'flex'}}>
+                        <div id="carousel">
+                            <div className="carouselArrows"></div>
+                        </div>
+                        <div id="sidePanel"></div>
                     </div>
                 </div>
             </React.Fragment>
