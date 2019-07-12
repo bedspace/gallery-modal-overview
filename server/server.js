@@ -18,13 +18,20 @@ app.use(bodyParser());
 app.get('/testing', (req,res) => {
     Houses.findAll().then((results) => {
         console.log('BEFORE WE SEND RESULTS, THE DATA TYPE IS');
-        // console.log(results);
         res.status(200).send(results);
-        // res.send({results});
     }).catch((error) => {
         res.status(404).send('SORRY NO DATA');
     });
-    // res.status(200).send('OK');
+});
+
+
+app.get('/images', (req,res) => {
+    Images.findAll().then((results) => {
+        res.status(200).send(results);
+        // res.send({results});
+    }).catch((error) => {
+        res.status(404).send('SORRY NO IMAGE DATA');
+    });
 });
 
 app.post('/post', (req, res) => {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const SidePanel = () => {
+const SidePanel = (props) => {
     return (
         <div id="sidePanel">
             <div className="pictureReel">
@@ -12,31 +12,13 @@ const SidePanel = () => {
                             <div className="fourthInnerPictureReel">
                                 <div className="actualPictureReel">
                                     <ul className="pictureList">
-                                        <li className="pictureItem">
-                                            <button className="itemButton">
-                                                <img  src="https://bit.ly/2S8xQ6H" className="pictureImage"/>
-                                            </button>
-                                        </li>
-                                        <li className="pictureItem">
-                                            <button className="itemButton">
-                                                <img  src="https://bit.ly/2S8xQ6H" className="pictureImage"/>
-                                            </button>
-                                        </li>                                      
-                                        <li className="pictureItem">
-                                            <button className="itemButton">
-                                                <img  src="https://bit.ly/2S8xQ6H" className="pictureImage"/>
-                                            </button>
-                                        </li>
-                                        <li className="pictureItem">
-                                            <button className="itemButton">
-                                                <img  src="https://bit.ly/2S8xQ6H" className="pictureImage"/>
-                                            </button>
-                                        </li>
-                                        <li className="pictureItem">
-                                            <button className="itemButton">
-                                                <img  src="https://bit.ly/2S8xQ6H" className="pictureImage"/>
-                                            </button>
-                                        </li>
+                                        {props.images.map((image, index) => (
+                                            <li key={image.id} className="pictureItem">
+                                                <button className="itemButton">
+                                                    <img  src={image.image_url} className="pictureImage"/>
+                                                </button>
+                                            </li>
+                                        ))};
                                     </ul>
                                 </div>
                             </div>

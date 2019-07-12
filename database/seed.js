@@ -63,17 +63,11 @@ const GenerateFakeImages = (houseId) => {
         console.log('THE RESULT FOR IMAGES IS');
         console.log(data);
     })
-    //Random image.urls
-
-    // house_Id points to individual house
-    //each house should have a default # of images
 };
 
 GenerateFakeImages();
 
 const GenerateFakeAmenities = () => {
-    //this will be tricky
-
     Amenities.create({
         items: 'Wifi',
         category: 'Basic',

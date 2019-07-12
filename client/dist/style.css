@@ -9,6 +9,8 @@
     background-color: black;
 }
 
+button:focus {outline:0;}
+
 .galleryContainer {
     display: flex;
     align-items: center;
@@ -40,7 +42,7 @@
     vertical-align: middle;
     position: relative;
     width: 67%;
-    height: 294.667px;
+    height: 354px;
     overflow: hidden;
     border-width: 1px;
     border-style: solid;
@@ -68,7 +70,7 @@
 .rightChild {
     position: relative;
     width: 33%;
-    height: 294.667px;
+    height: 354px;
     overflow:hidden;
 }
 
