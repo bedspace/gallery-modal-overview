@@ -2,14 +2,11 @@ const Houses = require('./index.js').Houses;
 const Images = require('./index.js').Images;
 const Amenities = require('./index.js').Amenities;
 const faker = require('faker');
-//require FAKER api here to fill in with fake data.
-// you will be doing BULKCREATE
+const ImageData = require('./data.js').imageData;
+
 
 const GenerateFakeHouses = () => {
-    //will need lorem ipsum for house_desc
-    //random first and last name for owners
-    //random numbers between rooms, beds, baths, guests
-    //GenerateFakeImages(houseId)
+
     let HouseListings = [];
     for (var i = 0; i < 10; i++) {
         let fakeName = faker.name.findName();
@@ -48,16 +45,12 @@ GenerateFakeHouses();
 
 
 const GenerateFakeImages = (houseId) => {
-    let images = [];
     let bulkValues = [];
-    images.push('https://bit.ly/2XCuA4');
-    images.push('https://bit.ly/2Xun9Bc');
-    images.push('https://bit.ly/2XMKgXd');
-    images.push('https://bit.ly/32eDPLP');
-    for (var i = 0; i < images.length; i++) {
+    for (var i = 0; i < ImageData.length; i++) {
         let values = {
-            image_url: images[i],
-            house_Id: 1
+            image_url: ImageData[i].url,
+            house_Id: 1,
+            desc: ImageData[i].desc
         }
         bulkValues.push(values);
     }
@@ -70,17 +63,11 @@ const GenerateFakeImages = (houseId) => {
         console.log('THE RESULT FOR IMAGES IS');
         console.log(data);
     })
-    //Random image.urls
-
-    // house_Id points to individual house
-    //each house should have a default # of images
 };
 
 GenerateFakeImages();
 
 const GenerateFakeAmenities = () => {
-    //this will be tricky
-
     Amenities.create({
         items: 'Wifi',
         category: 'Basic',

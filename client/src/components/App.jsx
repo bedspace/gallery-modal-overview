@@ -6,7 +6,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalActive: false
+            modalActive: false,
+            images: []
         }
 
         this.showModal = this.showModal.bind(this);
@@ -31,11 +32,11 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-
+        let self = this;
         //for handling escape key exit on modal
         window.addEventListener('keyup', this.hideModal, false);
 
-        fetch('http://localhost:1128/testing')
+        fetch('http://localhost:1128/images')
         .then(function(response) {
           console.log('BEFORE RESPONSE GETS JSOND');
           return response.json();
@@ -43,29 +44,36 @@ class App extends React.Component {
         .then(function(myJson) {
           console.log('WE GOT SOME DATA BACK');
           console.log(Array.isArray(myJson));
+          console.log(myJson);
+          self.setState({
+              images: myJson
+          });
         })
     }
 
     render() {
+        const { images } = this.state;
         return (
             <div className='parentDiv'>
+                {images.length > 0 && (
                 <div>
                     <div className="galleryContainer">
                         <div className="leftChild">
-                            <img src="https://bit.ly/2S8xQ6H"/>
+                            <img src={images[0].image_url}/>
                         </div>
                         <div className="rightChild">
                             <div className="rightInnerChildTop">
-                                <img className="smallImageTop" src="https://bit.ly/2G8adqa"/>
+                                <img className="smallImageTop" src={images[1].image_url}/>
                             </div>
                             <div className="rightInnerChildBottom">
-                                <img className="smallImageBottom" src="https://bit.ly/2G4EshE"/>
+                                <img className="smallImageBottom" src={images[2].image_url}/>
                             </div>
                         </div>
                     </div>
                     <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
+                <FullScreenModal images={images} modalActive={this.state.modalActive}/>
                 </div>
-            <FullScreenModal modalActive={this.state.modalActive}/>
+            )}
             </div>
         )
     }
