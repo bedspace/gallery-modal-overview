@@ -55,6 +55,9 @@ Images.init({
     image_url: {
         type: Sequelize.STRING
     },
+    desc: {
+        type: Sequelize.STRING
+    },
     house_Id: {
         type: Sequelize.INTEGER,
         references: {
@@ -85,24 +88,3 @@ Amenities.init({
 sequelize.sync();
 
 module.exports = {Houses, Images, Amenities};
-//HOUSES.HASMANY adds foreign key automatically, but id rather
-// show it explicitly in the schema.
-// Houses.hasMany(Images);
-//THIS AUTO creates a houseId field inside images table
-//or Images.belongsTo(Houses);
-//allow null defaults to true
-
-//shorter way of creating tables without .init method
-// const User = sequelize.define('user', {
-// // attributes
-// firstName: {
-//     type: Sequelize.STRING,
-//     allowNull: false
-// },
-// lastName: {
-//     type: Sequelize.STRING
-//     // allowNull defaults to true
-// }
-// }, {
-// // options
-// });
