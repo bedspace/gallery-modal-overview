@@ -225,6 +225,41 @@
     background-color: blue;
 }
 
+.carouselArrows {
+
+}
+
+#carousel {
+    position: relative;
+    padding: 20px;
+}
+
+.leftArrow {
+    position: absolute;
+}
+
+.leftArrow img {
+    height: 14px;
+    width: 14px;
+}
+
+.rightArrow img {
+    height: 14px;
+    width: 14px;
+}
+
+.rightArrow {
+    position: absolute;
+}
+
+.carouselImg {
+    height: 50vh;
+    width: 85%;
+    object-fit: cover;
+    border-radius: 16px;
+    z-index: 2;
+}
+
 
 * {
     box-sizing: border-box;
