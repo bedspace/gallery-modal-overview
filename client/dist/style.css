@@ -236,6 +236,13 @@
 
 .leftArrow {
     position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0px;
+    left:0px;
+    background: none;
+    border-style: hidden;
+    text-align: left;
 }
 
 .leftArrow img {
@@ -250,6 +257,14 @@
 
 .rightArrow {
     position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0px;
+    right:0px;
+    background: none;
+    border-style: hidden;
+    text-align: right;
+
 }
 
 .carouselImg {
