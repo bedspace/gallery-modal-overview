@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import SidePanel from './SidePanel.jsx';
 
 const styleValues={
     height: '24px',
@@ -45,7 +46,8 @@ class FullScreenModal extends React.Component {
                                 </div>
                             </span>
                         </div>
-                        <div id="sidePanel"></div>
+                        <SidePanel/>
+                        {/* <div id="sidePanel"></div> */}
                     </div>
                 </div>
             </React.Fragment>
