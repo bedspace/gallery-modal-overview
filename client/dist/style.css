@@ -216,13 +216,13 @@
 
 #carousel {
     width: 100%;
-    background-color: red;
+    background-color: white;
 }
 
 #sidePanel {
     width:264px;
     height:400px;
-    background-color: blue;
+    background-color: white;
     padding-top: 104px;
     /* vertical-align: top; */
 }
