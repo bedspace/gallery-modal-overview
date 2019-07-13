@@ -59,7 +59,7 @@ button:focus {outline:0;}
 .leftChild img {
     /* transition: all 0.3s, opacity 1s ease-in-out; */
     transition: all 0.3s;
-    transform: scale(1);
+    /* transform: scale(1); */
     /* opacity: 1; */
     /* scale: 1; */
     /* transform: opacity(1); */
@@ -289,6 +289,7 @@ li {
     float: left;
     background-color: rgb(255,255,255);
     border-radius: 4px;
+    margin-left: 5px;
 }
 
 .itemButton {
@@ -331,8 +332,24 @@ li {
     background: linear-gradient(270deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 90.82%);
 }
 
+.theLeftGradient {
+    position: absolute;
+    left: 0px;
+    height: 64px;
+    transform: rotate(180deg);
+    z-index: 1;
+    width: 20px;
+    background: linear-gradient(270deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 90.82%);
+}
+
 .carouselArrows {
 
+}
+
+#paragraph {
+    padding-right:39px;
+    font-weight: 100;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
 }
 
 #carousel {

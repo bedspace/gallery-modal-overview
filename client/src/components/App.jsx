@@ -28,6 +28,10 @@ class App extends React.Component {
             this.setState({
                 modalActive: false
             })
+        } else {
+            this.setState({
+                modalActive: false
+            })
         }
     }
 
@@ -71,7 +75,7 @@ class App extends React.Component {
                         </div>
                     </div>
                     <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
-                <FullScreenModal images={images} modalActive={this.state.modalActive}/>
+                <FullScreenModal hideModal={this.hideModal} images={images} modalActive={this.state.modalActive}/>
                 </div>
             )}
             </div>
