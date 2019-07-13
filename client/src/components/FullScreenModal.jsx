@@ -44,7 +44,6 @@ class FullScreenModal extends React.Component {
         });
     }
 
-// height: 24px; width: 24px; display: block; fill: rgb(72, 72, 72);
 
     render() {
         const { modalActive } = this.props;
@@ -90,8 +89,6 @@ class FullScreenModal extends React.Component {
                             </span>
                         </div>
                         <SidePanel imageIndex={imageIndex} translateX={this.state.translateX} images={images}/>
-                        {/* <div id="paragraph">{images[imageIndex].desc}</div> */}
-                        
                     </div>
                 </div>
             </React.Fragment>

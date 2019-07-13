@@ -30,7 +30,7 @@ const SidePanel = (props) => {
                                                     <img  src={image.image_url} className="pictureImage"/>
                                                 </button>
                                             </li>
-                                        ))};
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
