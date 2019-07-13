@@ -4,14 +4,14 @@ const Buttons = (props) => {
     return (
         <React.Fragment>
             <div className="viewPhotosContainer">
-                <button onClick={props.showModal} className="viewPhotosButton viewPhoto">
+                <button onClick={ () => {props.showModal('modalActive')}} className="viewPhotosButton viewPhoto">
                     <span>View Photos</span>
                 </button>
             </div>
             <div className="shareSaveContainer">
                 <div>
                     <div className="topButtons">
-                        <button  className="viewPhotosButton">
+                        <button  onClick={() => {props.showModal('shareModalActive')}} className="viewPhotosButton">
                             <span>
                                 <div style={{'justifyContent': 'center'}}>
                                     <div id="shareIcon">

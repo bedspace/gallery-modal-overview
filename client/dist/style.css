@@ -399,6 +399,144 @@ li {
 }
 
 
+.shareModalBG {
+    position: fixed;
+    background: rgba(0,0,0, 0.75);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2000;
+    /* visibility: hidden; */
+}
+
+.shareModalParent {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.shareModalChild {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shareModalDialog {
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    max-width: 376px;
+    width: 376px;
+    overflow: visible;
+    background-color: white;
+}
+
+.shareModalGrandChild {
+    padding: 32px;
+}
+
+.shareExitButtonParent {
+    background-color: white;
+    margin-bottom: 24px;
+}
+
+.shareExitButton {
+    display: inline-block;
+    color: buttontext;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    outline: 0px;
+    margin: -7px;
+    padding: 7px;
+}
+
+.shareHeaderParent {
+    padding-bottom: 24px;
+    padding-top: 0px;
+    border-bottom: 0px;
+}
+
+.shareHeaderParent h1 {
+    color: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+.shareHeaderParent h1 div{
+    overflow-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: rgb(72,72,72);
+    margin: 0px;
+}
+
+.shareTo {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.shareToChild {
+    padding-top: 24px;
+    padding-bottom:24px;
+    border-bottom: 1px solid rgb(235,235,235);
+    border-top: 1px solid rgb(235,235,235);
+}
+
+.shareToChild span {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.375em;
+    color: #484848;
+}
+
+.shareToChild span button {
+    color: #008489;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    -webkit-appearance: none;
+    cursor: pointer;
+    user-select: auto;
+    text-align: left;
+    display: inline-block;
+    font: inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+    text-decoration: none;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px;
+    padding: 0px;
+}
+
+.shareToIcon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.shareToIcon div {
+    margin-right: 8px;
+}
+
+.shareToText {
+    display: inline-flex;
+    align-self: center;
+}
+
 * {
     box-sizing: border-box;
 }
