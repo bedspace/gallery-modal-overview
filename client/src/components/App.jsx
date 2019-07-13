@@ -74,7 +74,7 @@ class App extends React.Component {
                     <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
                 <FullScreenModal hideModal={this.hideModal} images={images} modalActive={this.state.modalActive}/>
                 {/* Mini modal goes here */}
-                <ShareModal shareLinks={this.state.shareLinks} show={this.state.shareModalActive} showModal={this.showModal}/>
+                <ShareModal hideModal={this.hideModal} shareLinks={this.state.shareLinks} show={this.state.shareModalActive} showModal={this.showModal}/>
                 </div>
             )}
             </div>
