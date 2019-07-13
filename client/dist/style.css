@@ -410,6 +410,7 @@ li {
     /* visibility: hidden; */
 }
 
+
 .shareModalParent {
     display: flex;
     -webkit-box-align: center;
@@ -547,6 +548,236 @@ li {
 .shareToText {
     display: inline-flex;
     align-self: center;
+}
+
+.saveModalBG {
+    position: fixed;
+    background: rgba(255,255,255, 0.8);
+    z-index: 2000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: auto;
+}
+
+.saveModalParent {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.saveModalChild {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 64px;
+}
+
+.saveModalDialog {
+    background-color: rgb(255,255,255);
+    max-width: 568px;
+    width: 100%;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 10px 0px;
+    margin: auto;
+}
+
+.saveModalGrandChild {
+    background-color: rgb(255,255,255);
+    box-sizing: border-box;
+    padding:32px;
+}
+
+.saveModalGrandChild > header {
+    font-weight: 600;
+}
+
+.saveExitButtonParent {
+    margin-bottom: 24px;
+}
+
+.saveExitButton {
+    padding: 20px;
+    margin: -20px;
+    cursor: pointer;
+    background-color: transparent !important;
+    color: buttontext;
+    border: 0px;
+    display: block;
+    font-family: inherit;
+}
+
+.saveHeaderParent {
+    padding-bottom: 24px;
+    padding-top: 0px;
+    border-bottom: 0px;
+}
+
+.saveHeaderParent > h1 {
+    color: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+.saveHeaderParent > h1 > div {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: #484848;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.createListParent {
+    overflow-y: auto;
+    height: 50vh;
+    position: relative;
+    margin: 0px -32px 96px;
+    padding: 0px 32px;
+}
+
+.createListChild {
+    padding: 16px 0px;
+}
+
+.createListGrandChild {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-weight: 600;
+    line-height: 1.375em;
+    color: #484848;
+}
+
+.createListGrandChild > button {
+    color: #008489;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    user-select: auto;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+.currentHouseListing {
+    position: absolute;
+    /* this could be position fixed btw  */
+    right: 0px;
+    left: 0px;
+    background-color: rgb(255,255,255);
+    bottom: 0px;
+    top: calc(100% - 128px);
+    box-shadow: rgba(0,0,0,0.2) 0px -8px 20px -6px;
+    overflow-y: hidden;
+    transition: top 0.3s ease-in-out;
+}
+
+.currentHouseListing button {
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    padding: 24px 32px;
+}
+
+.houseIconParent {
+    display: inline-block;
+    padding-right: 16px;
+    vertical-align: top;
+    width: 120px;
+    height: 80px;
+}
+
+.houseIconParent > div {
+    background-image: url("https://a0.muscache.com/im/pictures/174db9b0-52f1-4611-a49e-50c160b80534.jpg?aki_policy=large");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center; 
+}
+
+.houseListingDetails {
+    width: calc(100% - 120px);
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+}
+
+.houseListingTitleParent {
+    margin-bottom: 8px;
+}
+
+.houseListingTitleChild {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.375em;
+    color: #484848;
+}
+
+.houseListingTitleChild > div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.houseLocation {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2857142857142858em;
+    color: #484848;
+}
+
+.houseLocation > div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.reviewStarsParent {
+    margin-top: 8px;
+}
+
+.reviewStarsChild {
+    vertical-align: middle;
+}
+
+.reviewStarsGrandChild {
+    width: 75px;
+    display: inline-block;
+    position: relative;
+    background-size: 14px 12px;
+    height: 12px;
+    transform: translateX(-1.5px);
+}
+
+.reviewCount {
+    overflow-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.28571em;
+    color: rgb(72,72,72);
+    margin: 0px;
 }
 
 * {

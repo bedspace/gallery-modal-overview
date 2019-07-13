@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Buttons from './Buttons.jsx';
 import FullScreenModal from './FullScreenModal.jsx';
 import ShareModal from './ShareModal.jsx';
+import SaveModal from './SaveModal.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class App extends React.Component {
             modalActive: false,
             images: [],
             shareModalActive: false,
-            shareLinks: ['FaceBook', 'Twitter', 'Pinterest', 'Messenger', 'WhatsApp']
+            saveModalActive: false
         }
 
         this.showModal = this.showModal.bind(this);
@@ -19,19 +20,16 @@ class App extends React.Component {
 
 
     showModal(modalType) {
-        console.log('MODAL STATE CHANGED');
-        //make it so both modals use the same handler using [nameHere]: true
         this.setState({
             [modalType]: true
         })
     }
 
     hideModal(event) {
-        console.log('MODAL STATE CLOSED');
-        //redundant logic
         this.setState({
             modalActive: false,
-            shareModalActive: false
+            shareModalActive: false,
+            saveModalActive: false
         })
     }
 
@@ -74,7 +72,8 @@ class App extends React.Component {
                     <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
                 <FullScreenModal hideModal={this.hideModal} images={images} modalActive={this.state.modalActive}/>
                 {/* Mini modal goes here */}
-                <ShareModal hideModal={this.hideModal} shareLinks={this.state.shareLinks} show={this.state.shareModalActive} showModal={this.showModal}/>
+                <ShareModal hideModal={this.hideModal}  show={this.state.shareModalActive} showModal={this.showModal}/>
+                <SaveModal show={this.state.saveModalActive}/>
                 </div>
             )}
             </div>

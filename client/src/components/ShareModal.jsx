@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ShareLinksModal from './ShareLinksModal.jsx';
 
-
 class ShareModal extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +19,6 @@ class ShareModal extends React.Component {
         }
 
         const { show } = this.props;
-        const { shareLinks } = this.props;
         const { hideModal } = this.props;
         console.log('SHOW VALUE IS ');
         console.log(show);
@@ -49,7 +47,7 @@ class ShareModal extends React.Component {
                                         </div>
                                     </header>
                                     <section>
-                                        <ShareLinksModal shareLinks={shareLinks}/>
+                                        <ShareLinksModal />
                                     </section>
                                 </section>
                             </div>

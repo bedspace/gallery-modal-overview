@@ -30,7 +30,7 @@ const Buttons = (props) => {
                         </button>
                     </div>
                     <div className="topButtons" style={{marginLeft: '18px'}}>
-                        <button  className="viewPhotosButton">
+                        <button onClick={() => {props.showModal('saveModalActive')}} className="viewPhotosButton">
                             <span>
                                 <div style={{'justifyContent': 'center', 'display': 'flex'}}>
                                     <div style={{marginRight: '12px'}}>
