@@ -5,6 +5,13 @@ const SidePanel = (props) => {
     let translatexValue = {
         transform: `translateX(${translateX}px)`
      };
+     let desc = [];
+     for (var i = 0; i < props.images.length; i++) {
+         desc.push(props.images[i].desc);
+     }
+
+     console.log('below is desc');
+     console.log(desc);
     return (
         <div id="sidePanel">
             <div className="pictureReel">
@@ -31,6 +38,7 @@ const SidePanel = (props) => {
                     </div>
                 </div>
             </div>
+            <div id="paragraph"><span>{desc[props.imageIndex]}</span></div>
         </div>
     )
 }

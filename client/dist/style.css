@@ -59,7 +59,7 @@ button:focus {outline:0;}
 .leftChild img {
     /* transition: all 0.3s, opacity 1s ease-in-out; */
     transition: all 0.3s;
-    transform: scale(1);
+    /* transform: scale(1); */
     /* opacity: 1; */
     /* scale: 1; */
     /* transform: opacity(1); */
@@ -344,6 +344,12 @@ li {
 
 .carouselArrows {
 
+}
+
+#paragraph {
+    padding-right:39px;
+    font-weight: 100;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
 }
 
 #carousel {
