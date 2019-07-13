@@ -432,13 +432,22 @@ li {
     background-color: white;
 }
 
-.shareModalGrandChild {
+.shareModalDialog > section {
     padding: 32px;
+}
+
+.shareModalDialog > section > section {
+    text-align: left;
+}
+
+.shareModalGrandChild {
+    padding: 5px;
+    text-align: left;
 }
 
 .shareExitButtonParent {
     background-color: white;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
 }
 
 .shareExitButton {
@@ -457,7 +466,7 @@ li {
 }
 
 .shareHeaderParent {
-    padding-bottom: 24px;
+    padding-bottom: 15px;
     padding-top: 0px;
     border-bottom: 0px;
 }
@@ -469,6 +478,8 @@ li {
     line-height: inherit;
     margin: 0px;
     padding: 0px;
+    text-align: left;
+    padding-left: 32px;
 }
 
 .shareHeaderParent h1 div{
@@ -490,6 +501,7 @@ li {
 .shareToChild {
     padding-top: 24px;
     padding-bottom:24px;
+    padding-left: 30px;
     border-bottom: 1px solid rgb(235,235,235);
     border-top: 1px solid rgb(235,235,235);
 }
