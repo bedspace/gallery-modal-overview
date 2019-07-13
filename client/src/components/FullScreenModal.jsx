@@ -12,7 +12,8 @@ class FullScreenModal extends React.Component {
         super(props);
 
         this.state = {
-            imageIndex: 0
+            imageIndex: 0,
+            translateX: 0
         }
 
         this.nextImage = this.nextImage.bind(this);
@@ -20,16 +21,26 @@ class FullScreenModal extends React.Component {
     }
 
     nextImage() {
+        if (this.state.imageIndex === this.props.images.length - 1) {
+            return;
+        }
+        let translateX = this.state.translateX;
+        translateX = translateX - 54;
         this.setState({
-            imageIndex: this.state.imageIndex + 1
+            imageIndex: this.state.imageIndex + 1,
+            translateX: translateX
         });
     }
 
     previousImage() {
         if (this.state.imageIndex === 0) return;
 
+        let translateX = this.state.translateX;
+        translateX = translateX + 54;
+
         this.setState({
-            imageIndex: this.state.imageIndex - 1
+            imageIndex: this.state.imageIndex - 1,
+            translateX: translateX
         });
     }
 
@@ -38,8 +49,8 @@ class FullScreenModal extends React.Component {
         const { modalActive } = this.props;
         const { images } = this.props;
         const { imageIndex } = this.state;
-        console.log('THESE IMAGES ARE FROM FULLSCREENMODAL.JSX');
-        console.log(images);
+
+
         const showOrHide = modalActive ? "modal display-block" : "display-none";
         return (
             <React.Fragment>
@@ -65,8 +76,7 @@ class FullScreenModal extends React.Component {
                                 </div>
                             </span>
                         </div>
-                        <SidePanel images={images}/>
-                        {/* <div id="sidePanel"></div> */}
+                        <SidePanel translateX={this.state.translateX} images={images}/>
                     </div>
                 </div>
             </React.Fragment>

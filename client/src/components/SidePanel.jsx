@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 const SidePanel = (props) => {
+    let { translateX } = props;
+    let translatexValue = {
+        transform: `translateX(${translateX}px)`
+     };
     return (
         <div id="sidePanel">
             <div className="pictureReel">
@@ -9,9 +13,10 @@ const SidePanel = (props) => {
                         <div className="thirdInnerPictureReel">
                             <div></div>
                             <div className="theGradient"></div>
+                            <div className="theLeftGradient"></div>
                             <div className="fourthInnerPictureReel">
                                 <div className="actualPictureReel">
-                                    <ul className="pictureList">
+                                    <ul style={translatexValue} className="pictureList">
                                         {props.images.map((image, index) => (
                                             <li key={image.id} className="pictureItem">
                                                 <button className="itemButton">
