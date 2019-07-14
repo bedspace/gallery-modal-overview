@@ -73,7 +73,7 @@ class App extends React.Component {
                 <FullScreenModal hideModal={this.hideModal} images={images} modalActive={this.state.modalActive}/>
                 {/* Mini modal goes here */}
                 <ShareModal hideModal={this.hideModal}  show={this.state.shareModalActive} showModal={this.showModal}/>
-                <SaveModal show={this.state.saveModalActive}/>
+                <SaveModal hideModal={this.hideModal} show={this.state.saveModalActive}/>
                 </div>
             )}
             </div>
