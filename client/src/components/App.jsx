@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import Buttons from './Buttons.jsx';
 import FullScreenModal from './FullScreenModal.jsx';
+import ShareModal from './ShareModal.jsx';
+import SaveModal from './SaveModal.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             modalActive: false,
-            images: []
+            images: [],
+            shareModalActive: false,
+            saveModalActive: false
         }
 
         this.showModal = this.showModal.bind(this);
@@ -15,24 +19,18 @@ class App extends React.Component {
     }
 
 
-    showModal() {
-        console.log('MODAL STATE CHANGED');
+    showModal(modalType) {
         this.setState({
-            modalActive: true
+            [modalType]: true
         })
     }
 
     hideModal(event) {
-        console.log('MODAL STATE CLOSED');
-        if (event.keyCode === 27) {
-            this.setState({
-                modalActive: false
-            })
-        } else {
-            this.setState({
-                modalActive: false
-            })
-        }
+        this.setState({
+            modalActive: false,
+            shareModalActive: false,
+            saveModalActive: false
+        })
     }
 
     componentDidMount() {
@@ -46,9 +44,6 @@ class App extends React.Component {
           return response.json();
         })
         .then(function(myJson) {
-          console.log('WE GOT SOME DATA BACK');
-          console.log(Array.isArray(myJson));
-          console.log(myJson);
           self.setState({
               images: myJson
           });
@@ -76,6 +71,9 @@ class App extends React.Component {
                     </div>
                     <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
                 <FullScreenModal hideModal={this.hideModal} images={images} modalActive={this.state.modalActive}/>
+                {/* Mini modal goes here */}
+                <ShareModal hideModal={this.hideModal}  show={this.state.shareModalActive} showModal={this.showModal}/>
+                <SaveModal hideModal={this.hideModal} show={this.state.saveModalActive}/>
                 </div>
             )}
             </div>
