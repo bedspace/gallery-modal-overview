@@ -3,6 +3,9 @@ import Buttons from './Buttons.jsx';
 import FullScreenModal from './FullScreenModal.jsx';
 import ShareModal from './ShareModal.jsx';
 import SaveModal from './SaveModal.jsx';
+import styles from '../cssModules/style.css';
+
+//IMPORT styles from './cssModules/example.css' then pass styles.galleryContainer into wherever it belongs etc
 
 class App extends React.Component {
     constructor(props) {
@@ -51,27 +54,28 @@ class App extends React.Component {
     }
 
     render() {
+        console.log('styles below');
+        console.dir(styles);
         const { images } = this.state;
         return (
-            <div className='parentDiv'>
+            <div className={styles.parentDiv}>
                 {images.length > 0 && (
                 <div>
-                    <div className="galleryContainer">
-                        <div className="leftChild">
+                    <div className={styles.galleryContainer}>
+                        <div className={styles.leftChild}>
                             <img src={images[0].image_url}/>
                         </div>
-                        <div className="rightChild">
-                            <div className="rightInnerChildTop">
-                                <img className="smallImageTop" src={images[1].image_url}/>
+                        <div className={styles.rightChild}>
+                            <div className={styles.rightInnerChildTop}>
+                                <img className={styles.smallImageTop} src={images[1].image_url}/>
                             </div>
-                            <div className="rightInnerChildBottom">
-                                <img className="smallImageBottom" src={images[2].image_url}/>
+                            <div className={styles.rightInnerChildBottom}>
+                                <img className={styles.smallImageBottom} src={images[2].image_url}/>
                             </div>
                         </div>
                     </div>
                     <Buttons hideModal={this.hideModal} showModal={this.showModal}/>
                 <FullScreenModal hideModal={this.hideModal} images={images} modalActive={this.state.modalActive}/>
-                {/* Mini modal goes here */}
                 <ShareModal hideModal={this.hideModal}  show={this.state.shareModalActive} showModal={this.showModal}/>
                 <SaveModal hideModal={this.hideModal} show={this.state.saveModalActive}/>
                 </div>

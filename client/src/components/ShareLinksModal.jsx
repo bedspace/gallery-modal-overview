@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ShareLinks from './ShareLinksSVG.jsx';
+import styles from '../cssModules/style.css';
 
 console.log(ShareLinks);
 let ShareLinksModal = (props) => {
@@ -13,18 +14,18 @@ let ShareLinksModal = (props) => {
         <React.Fragment>
             {ShareLinks.map((link, index) => {
                 return (
-                    <div key={link.text} className="shareTo">
-                        <div className="shareToChild">
+                    <div key={link.text} className={styles.shareTo}>
+                        <div className={styles.shareToChild}>
                             <div>
                                 <span>
                                     <button>
                                         <div style={{display: 'flex'}}>
-                                            <div className="shareToIcon">
+                                            <div className={styles.shareToIcon}>
                                                 <div>
                                                     {link.svg}
                                                 </div>
                                             </div>
-                                            <div className="shareToText">
+                                            <div className={styles.shareToText}>
                                                 <div>{link.text}</div>
                                             </div>
                                         </div>

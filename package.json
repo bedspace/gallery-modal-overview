@@ -20,7 +20,8 @@
     "react-dev": "webpack --watch",
     "seed": "node ./database/seed.js",
     "server": "node ./server/server.js",
-    "test": "jest ./test/App.test.js --coverage"
+    "test": "jest ./test/App.test.js --coverage",
+    "build": "npx webpack --config webpack.config.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -36,6 +37,7 @@
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
@@ -48,6 +50,7 @@
     "nodemon": "^1.19.1",
     "puppeteer": "^1.18.1",
     "sinon": "^7.3.2",
+    "style-loader": "^0.23.1",
     "supertest": "^4.0.2",
     "webpack-cli": "^3.3.5"
   }

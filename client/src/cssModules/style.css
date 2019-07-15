@@ -202,10 +202,7 @@ button:focus {outline:0;}
     bottom:0px;
     right:0px;
     background-color: white;
-}
-
-.display-block {
-    display:block;
+    display: block;
 }
 
 .display-none {
