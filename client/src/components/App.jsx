@@ -3,6 +3,8 @@ import Buttons from './Buttons.jsx';
 import FullScreenModal from './FullScreenModal.jsx';
 import ShareModal from './ShareModal.jsx';
 import SaveModal from './SaveModal.jsx';
+import styles from '../cssModules/style.css';
+
 //IMPORT styles from './cssModules/example.css' then pass styles.galleryContainer into wherever it belongs etc
 
 class App extends React.Component {
@@ -52,9 +54,11 @@ class App extends React.Component {
     }
 
     render() {
+        console.log('styles below');
+        console.dir(styles);
         const { images } = this.state;
         return (
-            <div className='parentDiv'>
+            <div className="parentDiv">
                 {images.length > 0 && (
                 <div>
                     <div className="galleryContainer">

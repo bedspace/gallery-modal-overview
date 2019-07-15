@@ -1,0 +1,789 @@
+.parentDiv {
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+
+button:focus {outline:0;}
+
+.galleryContainer {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.galleryContainer:hover img{
+    opacity: 0.5;
+}
+
+.galleryContainer:hover .rightInnerChildBottom:hover img{
+    opacity: 1;
+}
+
+.galleryContainer:hover .rightInnerChildTop:hover img{
+    opacity: 1;
+}
+
+.galleryContainer:hover .leftChild:hover img{
+    opacity: 1;
+}
+
+.leftChild {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    width: 67%;
+    height: 354px;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.leftChild:hover img {
+    transform: scale(1.1);
+    /* z-index: 0; */
+    /* transform: opacity(0.5); */
+    /* transform: scale(1.1); */
+    /* opacity: (0.1); */
+}
+
+.leftChild img {
+    /* transition: all 0.3s, opacity 1s ease-in-out; */
+    transition: all 0.3s;
+    /* transform: scale(1); */
+    /* opacity: 1; */
+    /* scale: 1; */
+    /* transform: opacity(1); */
+    /* transition: opacity 1s ease-in-out; */
+    /* opacity: 1; */
+}
+
+.rightChild {
+    position: relative;
+    width: 33%;
+    height: 354px;
+    overflow:hidden;
+}
+
+.rightInnerChildTop {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rightInnerChildBottom {
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+/* .rightInnerChild img {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.rightInnerChild:hover img {
+    transform: scale(1.1);
+} */
+
+.rightInnerChildTop:hover img {
+    transform:scale(1.1);
+}
+
+.rightInnerChildBottom:hover img {
+    transform:scale(1.1);
+}
+
+.smallImageTop {
+    display: inline-block;
+    left: 0px;
+    position: absolute;
+    transition: 0.3s;
+    transform: scale(1);
+}
+
+.smallImageBottom {
+    display: inline-block;
+    left: 0px;
+    position: absolute;
+    transition: 0.3s;
+    transform: scale(1);
+}
+
+
+.viewPhotosContainer {
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+}
+
+
+.viewPhotosButton {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    width: auto;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: normal;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-width: 1px;
+    border-style: solid;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.shareSaveContainer {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    /* z-index: 1; */
+}
+
+#shareIcon {
+    display: inline-block !important;
+    align-self: center;
+}
+
+#shareIcon img {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+}
+
+#shareText {
+    display: inline-block !important;
+    align-self: center;
+}
+
+#heartIcon {
+    height:15px;
+    width:16px;
+    position: relative;
+    top: 2px;
+}
+
+.topButtons {
+    display: inline-block;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
+.modal {
+    position: fixed;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color: white;
+}
+
+.display-block {
+    display:block;
+}
+
+.display-none {
+    display: none;
+}
+
+#carousel {
+    width: 100%;
+    background-color: white;
+}
+
+#sidePanel {
+    width:264px;
+    height:400px;
+    background-color: white;
+    padding-top: 104px;
+    /* vertical-align: top; */
+}
+
+.pictureReel {
+    width: 100%;
+    padding-right: 52px;
+    margin: 0px;
+}
+
+.innerPictureReel {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 32px;
+}
+
+.secondInnerPictureReel {
+    max-width: 105vh;
+    margin-left:auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.thirdInnerPictureReel {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transform: translateY(0px);
+    transition: all 0.2s ease-out;
+}
+
+.fourthInnerPictureReel {
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 64px;
+    overflow: hidden;
+}
+
+.actualPictureReel {
+    position: absolute;
+    width: 5656px;
+}
+
+.pictureList {
+    position: absolute;
+    list-style-type: none;
+    left: 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 8px;
+    transition: all 0.3s ease-out;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+.pictureItem {
+    float: left;
+    background-color: rgb(255,255,255);
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.itemButton {
+    font-weight: inherit;
+    backface-visibility: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 48px;
+    height: 48px;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 8px 2px, rgb(72, 72, 72) 0px 0px 0px 2px !important;
+    overflow: hidden;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-radius: 4px;
+}
+
+.pictureImage {
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:100%;
+    width:auto;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+
+.theGradient {
+    position: absolute;
+    right: 0px;
+    height: 64px;
+    z-index: 1;
+    width: 20px;
+    background: linear-gradient(270deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 90.82%);
+}
+
+.theLeftGradient {
+    position: absolute;
+    left: 0px;
+    height: 64px;
+    transform: rotate(180deg);
+    z-index: 1;
+    width: 20px;
+    background: linear-gradient(270deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 90.82%);
+}
+
+.carouselArrows {
+
+}
+
+#paragraph {
+    padding-right:39px;
+    font-weight: 100;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+}
+
+#carousel {
+    position: relative;
+    padding: 20px;
+}
+
+.leftArrow {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0px;
+    left:0px;
+    background: none;
+    border-style: hidden;
+    text-align: left;
+}
+
+.leftArrow img {
+    height: 14px;
+    width: 14px;
+}
+
+.rightArrow img {
+    height: 14px;
+    width: 14px;
+}
+
+.rightArrow {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0px;
+    right:0px;
+    background: none;
+    border-style: hidden;
+    text-align: right;
+
+}
+
+.carouselImg {
+    height: 50vh;
+    width: 85%;
+    object-fit: cover;
+    border-radius: 16px;
+    z-index: 2;
+}
+
+
+.shareModalBG {
+    position: fixed;
+    background: rgba(0,0,0, 0.75);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2000;
+    /* visibility: hidden; */
+}
+
+
+.shareModalParent {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.shareModalChild {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shareModalDialog {
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    max-width: 376px;
+    width: 376px;
+    overflow: visible;
+    background-color: white;
+}
+
+.shareModalDialog > section {
+    padding: 32px;
+}
+
+.shareModalDialog > section > section {
+    text-align: left;
+}
+
+.shareModalGrandChild {
+    padding: 5px;
+    text-align: left;
+}
+
+.shareExitButtonParent {
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+.shareExitButton {
+    display: inline-block;
+    color: buttontext;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    outline: 0px;
+    margin: -7px;
+    padding: 7px;
+}
+
+.shareHeaderParent {
+    padding-bottom: 15px;
+    padding-top: 0px;
+    border-bottom: 0px;
+}
+
+.shareHeaderParent h1 {
+    color: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    padding-left: 32px;
+}
+
+.shareHeaderParent h1 div{
+    overflow-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: rgb(72,72,72);
+    margin: 0px;
+}
+
+.shareTo {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.shareToChild {
+    padding-top: 24px;
+    padding-bottom:24px;
+    padding-left: 30px;
+    border-bottom: 1px solid rgb(235,235,235);
+    border-top: 1px solid rgb(235,235,235);
+}
+
+.shareToChild span {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.375em;
+    color: #484848;
+}
+
+.shareToChild span button {
+    color: #008489;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    -webkit-appearance: none;
+    cursor: pointer;
+    user-select: auto;
+    text-align: left;
+    display: inline-block;
+    font: inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+    text-decoration: none;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px;
+    padding: 0px;
+}
+
+.shareToIcon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.shareToIcon div {
+    margin-right: 8px;
+}
+
+.shareToText {
+    display: inline-flex;
+    align-self: center;
+}
+
+.saveModalBG {
+    position: fixed;
+    background: rgba(255,255,255, 0.8);
+    z-index: 2000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: auto;
+}
+
+.saveModalParent {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.saveModalChild {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 64px;
+}
+
+.saveModalDialog {
+    background-color: rgb(255,255,255);
+    max-width: 568px;
+    width: 100%;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 10px 0px;
+    margin: auto;
+}
+
+.saveModalGrandChild {
+    background-color: rgb(255,255,255);
+    box-sizing: border-box;
+    padding:32px;
+}
+
+.saveModalGrandChild > header {
+    font-weight: 600;
+}
+
+.saveExitButtonParent {
+    margin-bottom: 24px;
+}
+
+.saveExitButton {
+    padding: 20px;
+    margin: -20px;
+    cursor: pointer;
+    background-color: transparent !important;
+    color: buttontext;
+    border: 0px;
+    display: block;
+    font-family: inherit;
+}
+
+.saveHeaderParent {
+    padding-bottom: 24px;
+    padding-top: 0px;
+    border-bottom: 0px;
+}
+
+.saveHeaderParent > h1 {
+    color: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+.saveHeaderParent > h1 > div {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: #484848;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.createListParent {
+    overflow-y: auto;
+    height: 50vh;
+    position: relative;
+    margin: 0px -32px 96px;
+    padding: 0px 32px;
+}
+
+.createListChild {
+    padding: 16px 0px;
+}
+
+.createListGrandChild {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-weight: 600;
+    line-height: 1.375em;
+    color: #484848;
+}
+
+.createListGrandChild > button {
+    color: #008489;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    text-decoration: none;
+    border: 0px;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    user-select: auto;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+.currentHouseListing {
+    position: absolute;
+    /* this could be position fixed btw  */
+    right: 0px;
+    left: 0px;
+    background-color: rgb(255,255,255);
+    bottom: 0px;
+    top: calc(100% - 128px);
+    box-shadow: rgba(0,0,0,0.2) 0px -8px 20px -6px;
+    overflow-y: hidden;
+    transition: top 0.3s ease-in-out;
+}
+
+.currentHouseListing button {
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    background: transparent;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    padding: 24px 32px;
+}
+
+.houseIconParent {
+    display: inline-block;
+    padding-right: 16px;
+    vertical-align: top;
+    width: 120px;
+    height: 80px;
+}
+
+.houseIconParent > div {
+    background-image: url("https://a0.muscache.com/im/pictures/174db9b0-52f1-4611-a49e-50c160b80534.jpg?aki_policy=large");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center; 
+}
+
+.houseListingDetails {
+    width: calc(100% - 120px);
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+}
+
+.houseListingTitleParent {
+    margin-bottom: 8px;
+}
+
+.houseListingTitleChild {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.375em;
+    color: #484848;
+}
+
+.houseListingTitleChild > div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.houseLocation {
+    margin: 0px;
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2857142857142858em;
+    color: #484848;
+}
+
+.houseLocation > div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.reviewStarsParent {
+    margin-top: 8px;
+}
+
+.reviewStarsChild {
+    vertical-align: middle;
+}
+
+.reviewStarsGrandChild {
+    width: 75px;
+    display: inline-block;
+    position: relative;
+    background-size: 14px 12px;
+    height: 12px;
+    transform: translateX(-1.5px);
+}
+
+.reviewCount {
+    overflow-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.28571em;
+    color: rgb(72,72,72);
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
