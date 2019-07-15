@@ -4,18 +4,20 @@ import styles from '../cssModules/style.css';
 const Buttons = (props) => {
     return (
         <React.Fragment>
-            <div className="viewPhotosContainer">
-                <button onClick={ () => {props.showModal('modalActive')}} className="viewPhotosButton viewPhoto">
+            <div className={styles.viewPhotosContainer}>
+                {/* just as a note. Before refactoring with CSS modules. The button below had 2 classes, viewPhotosButton and viewPhoto. 
+                I didn't use viewphoto however. So if theres an error later on, come back to this. */}
+                <button onClick={ () => {props.showModal('modalActive')}} className={styles.viewPhotosButton}>
                     <span>View Photos</span>
                 </button>
             </div>
-            <div className="shareSaveContainer">
+            <div className={styles.shareSaveContainer}>
                 <div>
-                    <div className="topButtons">
-                        <button  onClick={() => {props.showModal('shareModalActive')}} className="viewPhotosButton">
+                    <div className={styles.topButtons}>
+                        <button  onClick={() => {props.showModal('shareModalActive')}} className={styles.viewPhotosButton}>
                             <span>
                                 <div style={{'justifyContent': 'center'}}>
-                                    <div id="shareIcon">
+                                    <div id={styles.shareIcon}>
                                         <div style={{marginRight: '17px'}}>
                                             {/* <ShareSVG/> */}
                                             <img src="https://i.ibb.co/71Ws2XW/AIRBNB-SHARE-ICON.png"/>
@@ -23,20 +25,20 @@ const Buttons = (props) => {
                                             {/* PUT SVG MARKUP COMPONENT HEREE */}
                                         </div>
                                     </div>
-                                    <div id="shareText">
+                                    <div id={styles.shareText}>
                                         <div>Share</div>
                                     </div>
                                 </div>
                             </span>
                         </button>
                     </div>
-                    <div className="topButtons" style={{marginLeft: '18px'}}>
-                        <button onClick={() => {props.showModal('saveModalActive')}} className="viewPhotosButton">
+                    <div className={styles.topButtons} style={{marginLeft: '18px'}}>
+                        <button onClick={() => {props.showModal('saveModalActive')}} className={styles.viewPhotosButton}>
                             <span>
                                 <div style={{'justifyContent': 'center', 'display': 'flex'}}>
                                     <div style={{marginRight: '12px'}}>
                                         <div></div>
-                                        <img id="heartIcon" src="https://bit.ly/30sMiZY"/>
+                                        <img id={styles.heartIcon} src="https://bit.ly/30sMiZY"/>
                                     </div>
                                     <div>Save</div>
                                 </div>

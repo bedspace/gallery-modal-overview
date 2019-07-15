@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styles from '../cssModules/style.css';
 
 const SidePanel = (props) => {
     let { translateX } = props;
@@ -13,21 +14,21 @@ const SidePanel = (props) => {
      console.log('below is desc');
      console.log(desc);
     return (
-        <div id="sidePanel">
-            <div className="pictureReel">
-                <div className="innerPictureReel">
-                    <div className="secondInnerPictureReel">
-                        <div className="thirdInnerPictureReel">
+        <div id={styles.sidePanel}>
+            <div className={styles.pictureReel}>
+                <div className={styles.innerPictureReel}>
+                    <div className={styles.secondInnerPictureReel}>
+                        <div className={styles.thirdInnerPictureReel}>
                             <div></div>
-                            <div className="theGradient"></div>
-                            <div className="theLeftGradient"></div>
-                            <div className="fourthInnerPictureReel">
-                                <div className="actualPictureReel">
-                                    <ul style={translatexValue} className="pictureList">
+                            <div className={styles.theGradient}></div>
+                            <div className={styles.theLeftGradient}></div>
+                            <div className={styles.fourthInnerPictureReel}>
+                                <div className={styles.actualPictureReel}>
+                                    <ul style={translatexValue} className={styles.pictureList}>
                                         {props.images.map((image, index) => (
-                                            <li key={image.id} className="pictureItem">
-                                                <button className="itemButton">
-                                                    <img  src={image.image_url} className="pictureImage"/>
+                                            <li key={image.id} className={styles.pictureItem}>
+                                                <button className={styles.itemButton}>
+                                                    <img  src={image.image_url} className={styles.pictureImage}/>
                                                 </button>
                                             </li>
                                         ))}
@@ -38,7 +39,7 @@ const SidePanel = (props) => {
                     </div>
                 </div>
             </div>
-            <div id="paragraph"><span>{desc[props.imageIndex]}</span></div>
+            <div id={styles.paragraph}><span>{desc[props.imageIndex]}</span></div>
         </div>
     )
 }
