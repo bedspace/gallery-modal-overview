@@ -58,19 +58,19 @@ class App extends React.Component {
         console.dir(styles);
         const { images } = this.state;
         return (
-            <div className="parentDiv">
+            <div className={styles.parentDiv}>
                 {images.length > 0 && (
                 <div>
-                    <div className="galleryContainer">
-                        <div className="leftChild">
+                    <div className={styles.galleryContainer}>
+                        <div className={styles.leftChild}>
                             <img src={images[0].image_url}/>
                         </div>
-                        <div className="rightChild">
-                            <div className="rightInnerChildTop">
-                                <img className="smallImageTop" src={images[1].image_url}/>
+                        <div className={styles.rightChild}>
+                            <div className={styles.rightInnerChildTop}>
+                                <img className={styles.smallImageTop} src={images[1].image_url}/>
                             </div>
-                            <div className="rightInnerChildBottom">
-                                <img className="smallImageBottom" src={images[2].image_url}/>
+                            <div className={styles.rightInnerChildBottom}>
+                                <img className={styles.smallImageBottom} src={images[2].image_url}/>
                             </div>
                         </div>
                     </div>
