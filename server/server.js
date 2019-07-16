@@ -15,6 +15,11 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 app.use(bodyParser());
 
+app.all('/*',(req, res, next) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 app.get('/testing', (req,res) => {
     Houses.findAll().then((results) => {
         console.log('BEFORE WE SEND RESULTS, THE DATA TYPE IS');
