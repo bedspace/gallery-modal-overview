@@ -55,6 +55,7 @@ button:focus {outline:0;}
 .leftChild img {
     /* transition: all 0.3s, opacity 1s ease-in-out; */
     transition: all 0.3s;
+    width:100%;
     /* transform: scale(1); */
     /* opacity: 1; */
     /* scale: 1; */
@@ -82,6 +83,14 @@ button:focus {outline:0;}
     overflow: hidden;
     border-width: 1px;
     border-style: solid;
+}
+
+.rightInnerChildTop img {
+    width:100%;
+}
+
+.rightInnerChildBottom img {
+    width: 100%;
 }
 
 .rightInnerChildBottom {
