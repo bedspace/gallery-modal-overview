@@ -41,7 +41,7 @@ class App extends React.Component {
         //for handling escape key exit on modal
         window.addEventListener('keyup', this.hideModal, false);
 
-        fetch('http://localhost:1128/images')
+        fetch('/images')
         .then(function(response) {
           console.log('BEFORE RESPONSE GETS JSOND');
           return response.json();
