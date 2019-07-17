@@ -12,6 +12,7 @@ app.use(morgan('dev'));
 app.use(morgan(':method :url :status :res[content-length] - :response-time MILLISECONDS'));
 
 app.use(express.static(__dirname + '/../client/dist'));
+app.use('/:id', express.static(__dirname + '/../client/dist'));
 
 app.use(bodyParser());
 
@@ -36,6 +37,18 @@ app.get('/images', (req,res) => {
         // res.send({results});
     }).catch((error) => {
         res.status(404).send('SORRY NO IMAGE DATA');
+    });
+});
+
+app.get('/images/:houseId', (req,res) => {
+    Images.findAll({
+        where: {
+            house_Id: req.params.houseId
+        }
+    }).then((results) => {
+        res.status(200).send(results);
+    }).catch((error) => {
+        res.status(404).send('NO HOUSE IMAGE DATA');
     });
 });
 

@@ -19,6 +19,7 @@ class App extends React.Component {
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
+        this.fetchHouseImages = this.fetchHouseImages.bind(this);
     }
 
 
@@ -40,16 +41,21 @@ class App extends React.Component {
         let self = this;
         //for handling escape key exit on modal
         window.addEventListener('keyup', this.hideModal, false);
+        let houseId = window.location.pathname;
+        this.fetchHouseImages(houseId);
+    }
 
-        fetch('/images')
-        .then(function(response) {
-          console.log('BEFORE RESPONSE GETS JSOND');
-          return response.json();
+
+    fetchHouseImages(houseId) {
+        let self = this;
+        fetch(`/images${houseId}`)
+        .then((response) => {
+            return response.json();
         })
-        .then(function(myJson) {
-          self.setState({
-              images: myJson
-          });
+        .then((myJson) => {
+            self.setState({
+                images: myJson
+            });
         })
     }
 

@@ -8,7 +8,7 @@ const ImageData = require('./data.js').imageData;
 const GenerateFakeHouses = () => {
 
     let HouseListings = [];
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 100; i++) {
         let fakeName = faker.name.findName();
         let fakeHouseDesc = faker.lorem.paragraph(10);
 
@@ -34,8 +34,8 @@ const GenerateFakeHouses = () => {
         return Houses.findAll();
     })
     .then((data) => {
-        console.log('THIS IS WHAT THE RESULT IS');
-        console.log(data);
+        // console.log('THIS IS WHAT THE RESULT IS');
+        // console.log(data);
     });
     //by here, we will have all these fakeHouses
     //Now we findAll houses, get each ID and then inject several images into them
@@ -46,13 +46,15 @@ GenerateFakeHouses();
 
 const GenerateFakeImages = (houseId) => {
     let bulkValues = [];
-    for (var i = 0; i < ImageData.length; i++) {
-        let values = {
-            image_url: ImageData[i].url,
-            house_Id: 1,
-            desc: ImageData[i].desc
+    for (let i = 1; i <= 100; i++) {
+        for (var x = 0; x < ImageData.length; x++) {
+            let values = {
+                image_url: ImageData[x].url,
+                house_Id: i,
+                desc: ImageData[x].desc
+            }
+            bulkValues.push(values);
         }
-        bulkValues.push(values);
     }
 
     Images.bulkCreate(bulkValues)
