@@ -21,25 +21,6 @@ app.all('/*',(req, res, next) => {
     next();
 });
 
-app.get('/testing', (req,res) => {
-    Houses.findAll().then((results) => {
-        console.log('BEFORE WE SEND RESULTS, THE DATA TYPE IS');
-        res.status(200).send(results);
-    }).catch((error) => {
-        res.status(404).send('SORRY NO DATA');
-    });
-});
-
-
-app.get('/images', (req,res) => {
-    Images.findAll().then((results) => {
-        res.status(200).send(results);
-        // res.send({results});
-    }).catch((error) => {
-        res.status(404).send('SORRY NO IMAGE DATA');
-    });
-});
-
 app.get('/images/:houseId', (req,res) => {
     Images.findAll({
         where: {
@@ -51,12 +32,6 @@ app.get('/images/:houseId', (req,res) => {
         res.status(404).send('NO HOUSE IMAGE DATA');
     });
 });
-
-app.post('/post', (req, res) => {
-
-    mySqlDb.insertSampleData();
-})
-
 
 let port = 1128;
 
