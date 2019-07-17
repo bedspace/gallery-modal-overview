@@ -11,7 +11,6 @@ let app = express();
 app.use(morgan('dev'));
 app.use(morgan(':method :url :status :res[content-length] - :response-time MILLISECONDS'));
 
-app.use(express.static(__dirname + '/../client/dist'));
 app.use('/:id', express.static(__dirname + '/../client/dist'));
 
 app.use(bodyParser());
