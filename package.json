@@ -22,7 +22,7 @@
     "server": "node ./server/server.js",
     "test": "jest ./test/App.test.js --coverage",
     "build": "npx webpack --config webpack.config.js",
-    "start:docker": "npm run server && npm run seed"
+    "start:docker": "npm run server"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

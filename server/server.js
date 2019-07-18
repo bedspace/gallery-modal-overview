@@ -1,10 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const Houses = require('./../database/seed.js').Houses;
-const Images = require('./../database/seed.js').Images;
-const Amenities = require('./../database/seed.js').Amenities;
-// const mySqlDb = require('./../database/seed.js');
+const Database = require('./../database/seed.js');
 
 
 let app = express();
@@ -21,7 +18,7 @@ app.all('/*',(req, res, next) => {
 });
 
 app.get('/images/:houseId', (req,res) => {
-    Images.findAll({
+    Database.Images.findAll({
         where: {
             house_Id: req.params.houseId
         }
