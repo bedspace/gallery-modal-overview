@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const Houses = require('./../database/index.js').Houses;
-const Images = require('./../database/index.js').Images;
-const Amenities = require('./../database/index.js').Amenities;
+const Houses = require('./../database/seed.js').Houses;
+const Images = require('./../database/seed.js').Images;
+const Amenities = require('./../database/seed.js').Amenities;
 // const mySqlDb = require('./../database/seed.js');
 
 
