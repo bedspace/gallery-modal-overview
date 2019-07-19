@@ -1,9 +1,8 @@
+const faker = require('faker');
+const ImageData = require('./data.js').imageData;
 const Houses = require('./index.js').Houses;
 const Images = require('./index.js').Images;
 const Amenities = require('./index.js').Amenities;
-const faker = require('faker');
-const ImageData = require('./data.js').imageData;
-
 
 const GenerateFakeHouses = () => {
 
@@ -83,7 +82,3 @@ const GenerateFakeAmenities = () => {
 };
 
 GenerateFakeAmenities();
-
-
-
-//.sync() these guys's data.

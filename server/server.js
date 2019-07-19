@@ -1,10 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const Houses = require('./../database/index.js').Houses;
-const Images = require('./../database/index.js').Images;
-const Amenities = require('./../database/index.js').Amenities;
-// const mySqlDb = require('./../database/seed.js');
+const Images = require('./../database/index').Images;
+// const Database = require('./../database/seed.js');
 
 
 let app = express();
