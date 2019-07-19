@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('airbnb', 'root', null, {
-    host: 'localhost',
+    host: '172.17.0.2',
     dialect: 'mysql',
     logging: false
 });
